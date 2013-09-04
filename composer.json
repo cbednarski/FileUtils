@@ -1,6 +1,6 @@
 {
     "name": "cbednarski/fileutils",
-    "description": "Path utilities for *nix",
+    "description": "PHP Library for doing path-based filename manipulation and other similar fun activities",
     "license": "MIT",
     "authors": [
         {
