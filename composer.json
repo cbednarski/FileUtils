@@ -1,0 +1,17 @@
+{
+    "name": "cbednarski/fileutils",
+    "description": "Path utilities for *nix",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Bednarski",
+            "email": "banzaimonkey@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-0": {"cbednarski": "src/"}
+    }
+}
