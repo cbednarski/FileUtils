@@ -140,19 +140,13 @@ class FileUtils
 
     public static function pathDiff($outer, $inner, $suppress_leading_slash = false)
     {
-        $outer_len = strlen($outer);
+        $diff = str_replace($outer, '', $inner);
 
-        if (substr($inner, 0, $outer_len) === $outer) {
-            $diff = substr($inner, $outer_len);
-
-            if ($suppress_leading_slash) {
-                $diff = ltrim($diff, '/\\');
-            }
-
-            return $diff;
+        if ($suppress_leading_slash) {
+            $diff = ltrim($diff, '/\\');
         }
-
-        return '';
+        
+        return $diff;
     }
 
     public static function filterExists($paths)

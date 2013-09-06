@@ -136,7 +136,7 @@ class FileUtilsTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('and/some/more', $path);
 
         $path = FileUtils::pathDiff('/path/to/blah', '/path/to/cake');
-        $this->assertEquals('', $path);
+        $this->assertEquals('/path/to/cake', $path);
     }
 
     public function testFilterExists()
