@@ -166,15 +166,13 @@ class FileUtils
         return $temp;
     }
 
-    public static function removeExtension($filename, $extension, $default = '.html')
+    public static function removeExtension($filename, $extension, $default = 'html')
     {
-        $extension = '.' . $extension;
-
         if (pathinfo($filename, PATHINFO_EXTENSION) === $extension) {
-            $filename = substr($filename, 0, strlen($filename) - strlen($extension));
+            $filename = substr($filename, 0, strlen($filename) - (strlen($extension) + 1));
 
             if (pathinfo($filename, PATHINFO_EXTENSION) === '') {
-                $filename = $filename . $default;
+                $filename = $filename . '.' . $default;
             }
         }
 
