@@ -6,7 +6,7 @@ class FileUtils
 {
     public static function fileIsHidden($file_path)
     {
-        $parts = explode('/', self::softRealpath($file_path));
+        $parts = explode(DIRECTORY_SEPARATOR, self::softRealpath($file_path));
         foreach ($parts as $part) {
             if (strlen($part) > 0) {
                 if ($part[0] === '.') {

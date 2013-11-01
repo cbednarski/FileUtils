@@ -192,7 +192,7 @@ class FileUtilsTest extends PHPUnit_Framework_TestCase
 
     public function testFileIsHidden()
     {
-        $this->assertTrue(FileUtils::fileIsHidden('.'));
+        $this->assertFalse(FileUtils::fileIsHidden('.'));
         $this->assertTrue(FileUtils::fileIsHidden('.woot.php'));
         $this->assertTrue(FileUtils::fileIsHidden('/root/.idea/woot.php'));
         $this->assertFalse(FileUtils::fileIsHidden('root/hello.php'));
