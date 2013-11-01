@@ -76,6 +76,8 @@ class FileUtils
             }
         }
 
+        sort($files);
+
         return $files;
     }
 
