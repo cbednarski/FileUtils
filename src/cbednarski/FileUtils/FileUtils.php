@@ -217,6 +217,12 @@ class FileUtils
      */
     public static function softRealpath($path)
     {
+        $realpath = realpath($path);
+
+        if ($realpath !== false) {
+            return $realpath;
+        }
+
         $path = preg_replace("#([^\"*/:<>?\\\\|]+)/(\\.\\.)/#u", "", $path);
         $path = preg_replace("#([^\"*/:<>?\\\\|]+)/(\\.)?/#u", "$1/", $path);
 
